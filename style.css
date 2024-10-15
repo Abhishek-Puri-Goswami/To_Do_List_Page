@@ -1,0 +1,120 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    color: #f0ffff;
+    background-color: #060b23;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input {
+    width: 350px;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 1px solid #f0ffff;
+    background: transparent;
+    color: #f0ffff;
+    /* default outline prevented */
+    outline: none;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #f0ffff;
+    font-size: 19px;
+    /* pointer on label prevented */
+    pointer-events: none;
+    transition: 0.1s;
+}
+
+input:focus {
+    border: 2px solid #18ffff;
+}
+
+input:focus~label,
+input:valid~label {
+    top: 0;
+    left: 15px;
+    color: #18ffff;
+    font-size: 16px;
+    padding: 0 4px;
+    background: #060b23;
+}
+
+#heading {
+    border-top: 16px solid #18ffff;
+    border-bottom: 16px solid #18ffff;
+    margin: 0 20px 20px 20px;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+#addBtn {
+    color: #f0ffff;
+    font-size: 0.8em;
+    background-color: #060b23;
+    border: 1px solid #f0ffff;
+    border-radius: 6px;
+    padding: 4px 10px;
+    transition: 0.15s;
+    position: relative;
+    left: 30px;
+}
+
+li>button {
+    color: #f0ffff;
+    font-size: 0.8em;
+    background-color: #060b23;
+    border: 1px solid #f0ffff;
+    border-radius: 6px;
+    padding: 2px 6px;
+    margin: 10px 0 10px 0;    
+    transition: 0.15s;
+}
+
+#addBtn:hover,
+li>button:hover {
+    color: #18ffff;
+    border-color: #18ffff;
+    transform: scale(1.1);
+}
+
+#addBtn:active {
+    transform: scale(1);
+}
+
+.tasks {
+    height: fit-content;
+    width: 90vw;
+}
+
+ul {
+    line-height: 20px;
+    margin: 20px 200px;
+}
+
+ul>li{
+    padding: 4px 15px;
+}
